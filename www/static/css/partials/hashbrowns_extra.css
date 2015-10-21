@@ -1,0 +1,10 @@
+/*
+
+Custom adjustment for form within
+hashbrowns.html
+
+*/
+
+#potato input {
+  width: 67%;
+}

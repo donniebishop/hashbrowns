@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- default stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/holo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sticky_footer.css') }}">{% endblock head %}
+
+    <!-- Extra styles -->{% block extra_styles %}{% endblock extra_styles %}
+
+    <title>{% block title %}Index{% endblock title %}</title>
+  </head>
+
+  <body>
+    <div id="content">{% block content %}
+      <div class="container">
+        <h1>Welcome to my page</h1>
+      </div>{% endblock content %}
+    </div>
+
+    <!-- footer -->{% block footer %}
+    <footer class="footer">
+      <div class="container">
+          <p class="text-muted text-left">Copyright 2015, CoD.</p>
+      </div>
+    </footer>{% endblock footer %}
+
+    <!-- loading jQuery and custom bootstrap.js  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  </body>
+</html>

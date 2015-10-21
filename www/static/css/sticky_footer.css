@@ -1,0 +1,27 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.content {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+  /*clear:both;*/
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
+.footer .container{
+  position: relative;
+}
+
+.container .text-muted {
+  margin: 15px 0;
+}
