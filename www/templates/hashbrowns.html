@@ -9,18 +9,28 @@
 {% block content %}
       <div class="container-fluid">
         <div class="container">
+
           <div id="header">
             <h1><b>Hashbrowns</b> - the Stylish Hashgen</h1>
           </div>
+
+          <div id="tabbednav">
+            <ul class="nav nav-tabs nav-left">
+              <li role="presentation"><a href="{{ url_for('hashbrowns') }}">Hashbrowns</a></li>
+              <li role="presentation"><a href="#">Contact</a></li>
+              <li role="presentation"><a href="{{ url_for('index') }}">Index</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
 
-      <hr>
+      <br>
 
       <div class="container" id="potato">
 
-        <p>Welcome to my nice-ish looking hash generator!</p>
-        <p>Enter your text and watch it simultaneously get mashed and hashed into little hashbrowns!</p>
+        <!-- <p>Welcome to my nice-ish looking hash generator!</p>
+        <p>Enter your text and watch it simultaneously get mashed and hashed into little hashbrowns!</p> -->
 
         <h3>El Potato</h3>
         <form method="post">
