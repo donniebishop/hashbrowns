@@ -1,5 +1,4 @@
 import hashlib
-# import bcrypt
 
 def hash_maker(orig):
     ORIGINAL = orig
