@@ -24,6 +24,7 @@ def hashbrowns():
 				md5=h_dict['md5'],
 				sha1=h_dict['sha1'],
 				sha224=h_dict['sha224'],
-				sha256=h_dict['sha256'])
+				sha256=h_dict['sha256'],
+				sha512=h_dict['sha512'])
 	else:
 		return render_template('hashbrowns.html')
