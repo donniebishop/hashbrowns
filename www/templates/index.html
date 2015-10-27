@@ -15,11 +15,37 @@
   </head>
 
   <body>
-    <div id="content">{% block content %}
-      <div class="container">
-        <h1>Welcome to my page</h1>
-      </div>{% endblock content %}
-    </div>
+    <!-- header -->{% block header %}
+    <div class="container">
+
+      <div id="header">
+        <h1><b>Hashbrowns</b> - the Stylish Hashgen</h1>
+      </div>
+
+      <div id="tabbednav">
+        <ul class="nav nav-tabs nav-left">
+          <li role="presentation"><a href="{{ url_for('hashbrowns') }}">Hashbrowns</a></li>
+          <li role="presentation"><a href="#">Contact</a></li>
+          <li role="presentation"><a href="{{ url_for('index') }}">Index</a></li>
+        </ul>
+      </div>
+
+    </div>{% endblock header %}
+
+    <br> <!-- for spacing underneath #tabbednav -->
+
+    <!-- Page content -->{% block content %}
+    <div class="container">
+      Buddy you're a boy make a big noise<br>
+      Playin' in the street gonna be a big man some day<br>
+      You got mud on yo' face<br>
+      You big disgrace<br>
+      Kickin' your can all over the place<br>
+      Singin'<br>
+      <br>
+      We will we will rock you<br>
+      We will we will rock you<br>
+    </div>{% endblock content %}
 
     <!-- footer -->{% block footer %}
     <footer class="footer">

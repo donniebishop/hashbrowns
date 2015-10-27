@@ -7,82 +7,62 @@
 {% block title %}Hashbrowns{% endblock title %}
 
 {% block content %}
-      <div class="container">
 
-        <div id="header">
-          <h1><b>Hashbrowns</b> - the Stylish Hashgen</h1>
+    <div class="container" id="potato">
+
+      <h3>El Potato</h3>
+      <form method="post">
+        <div class="form-group">
+          <input type="text" class="form-control input-lg" name="potato" placeholder="Enter hashable text here">
         </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
 
-        <div id="tabbednav">
-          <ul class="nav nav-tabs nav-left">
-            <li role="presentation"><a href="{{ url_for('hashbrowns') }}">Hashbrowns</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-            <li role="presentation"><a href="{{ url_for('index') }}">Index</a></li>
-          </ul>
+    </div>
+
+    <br>
+
+    <!-- hashbrowns -->
+    <div class="container" id="hashContainer">
+      <h3>Les Hashbrowns</h3>
+        <div class="row">
+
+          <!-- original text -->
+          <div class="form-group col-md-4 col-xs-12">
+            <label for="original">Orginal Text</label>
+            <input type="text" class="form-control" id="original" value="{{ original }}" placeholder="Orginal" readonly>
+          </div>
+
+          <!-- md5 -->
+          <div class="form-group col-md-4 col-xs-12">
+            <label for="md5">MD5</label>
+            <input type="text" class="form-control" id="md5" value="{{ md5 }}" placeholder="MD5" readonly>
+          </div>
+
+          <!-- sha-1 -->
+          <div class="form-group col-md-4 col-xs-12">
+            <label for="sha1">SHA-1</label>
+            <input type="text" class="form-control" id="sha1" value="{{ sha1 }}" placeholder="SHA-1" readonly>
+          </div>
+
+          <!-- sha-224 -->
+          <div class="form-group col-md-5 col-xs-12">
+            <label for="sha224">SHA-224</label>
+            <input type="text" class="form-control" id="sha224" value="{{ sha224 }}" placeholder="SHA-224" readonly>
+          </div>
+
+          <!-- sha-256 -->
+          <div class="form-group col-md-6 col-xs-12">
+            <label for="sha256">SHA-256</label>
+            <input type="text" class="form-control" id="sha256" value="{{ sha256 }}" placeholder="SHA-256" readonly>
+          </div>
+
+          <!-- sha-512 -->
+          <div class="form-group col-md-11 col-xs-12">
+            <label for="sha512">SHA-512</label>
+            <input type="text" class="form-control" id="sha512" value="{{ sha512 }}" placeholder="SHA-512" readonly>
+          </div>
+
         </div>
-
-      </div>
-
-      <br>
-
-      <div class="container" id="potato">
-
-        <!-- <p>Welcome to my nice-ish looking hash generator!</p>
-        <p>Enter your text and watch it simultaneously get mashed and hashed into little hashbrowns!</p> -->
-
-        <h3>El Potato</h3>
-        <form method="post">
-          <div class="form-group">
-            <input type="text" class="form-control input-lg" name="potato" placeholder="Enter hashable text here">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-
-      </div>
-
-      <br>
-
-      <!-- hashbrowns -->
-      <div class="container" id="hashContainer">
-        <h3>Les Hashbrowns</h3>
-          <div class="row">
-
-            <!-- original text -->
-            <div class="form-group col-md-4 col-xs-12">
-              <label for="original">Orginal Text</label>
-              <input type="text" class="form-control" id="original" value="{{ original }}" placeholder="Orginal" readonly>
-            </div>
-
-            <!-- md5 -->
-            <div class="form-group col-md-4 col-xs-12">
-              <label for="md5">MD5</label>
-              <input type="text" class="form-control" id="md5" value="{{ md5 }}" placeholder="MD5" readonly>
-            </div>
-
-            <!-- sha-1 -->
-            <div class="form-group col-md-4 col-xs-12">
-              <label for="sha1">SHA-1</label>
-              <input type="text" class="form-control" id="sha1" value="{{ sha1 }}" placeholder="SHA-1" readonly>
-            </div>
-
-            <!-- sha-224 -->
-            <div class="form-group col-md-5 col-xs-12">
-              <label for="sha224">SHA-224</label>
-              <input type="text" class="form-control" id="sha224" value="{{ sha224 }}" placeholder="SHA-224" readonly>
-            </div>
-
-            <!-- sha-256 -->
-            <div class="form-group col-md-6 col-xs-12">
-              <label for="sha256">SHA-256</label>
-              <input type="text" class="form-control" id="sha256" value="{{ sha256 }}" placeholder="SHA-256" readonly>
-            </div>
-
-            <!-- sha-512 -->
-            <div class="form-group col-md-11 col-xs-12">
-              <label for="sha512">SHA-512</label>
-              <input type="text" class="form-control" id="sha512" value="{{ sha512 }}" placeholder="SHA-512" readonly>
-            </div>
-
-          </div>
-      </div>
+    </div>
 {% endblock content %}
