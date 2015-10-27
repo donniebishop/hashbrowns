@@ -34,25 +34,29 @@
 
     <br> <!-- for spacing underneath #tabbednav -->
 
-    <!-- Page content -->{% block content %}
-    <div class="container">
-      Buddy you're a boy make a big noise<br>
-      Playin' in the street gonna be a big man some day<br>
-      You got mud on yo' face<br>
-      You big disgrace<br>
-      Kickin' your can all over the place<br>
-      Singin'<br>
-      <br>
-      We will we will rock you<br>
-      We will we will rock you<br>
-    </div>{% endblock content %}
+    <!-- Page content -->
+    <div id="content">
+    {% block content %}
+      <div class="container">
+        Buddy you're a boy make a big noise<br>
+        Playin' in the street gonna be a big man some day<br>
+        You got mud on yo' face<br>
+        You big disgrace<br>
+        Kickin' your can all over the place<br>
+        Singin'<br>
+        <br>
+        We will we will rock you<br>
+        We will we will rock you<br>
+      </div>
+    {% endblock content %}
+    </div>
 
     <!-- footer -->{% block footer %}
-    <footer class="footer">
+    <div id="footer">
       <div class="container">
           <p class="text-muted text-left">Copyright 2015, CoD.</p>
       </div>
-    </footer>{% endblock footer %}
+    </div>{% endblock footer %}
 
     <!-- loading jQuery and custom bootstrap.js  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
