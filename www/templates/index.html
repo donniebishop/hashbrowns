@@ -23,7 +23,7 @@
       </div>
 
       <div id="tabbednav">
-        <ul class="nav nav-tabs nav-left">
+        <ul class="nav nav-tabs nav-left" id="tab_list">
           <li role="presentation"><a href="{{ url_for('hashbrowns') }}">Hashbrowns</a></li>
           <li role="presentation"><a href="#">Contact</a></li>
           <li role="presentation"><a href="{{ url_for('index') }}">Index</a></li>
@@ -60,6 +60,7 @@
 
     <!-- loading jQuery and custom bootstrap.js  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/my.js') }}"></script>
   </body>
 </html>
